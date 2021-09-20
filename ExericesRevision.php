@@ -44,7 +44,9 @@
         //     echo $chiffre1 . " / " . $chiffre2 . " = " . $chiffre1/$chiffre2 . "\n";
         //     echo $chiffre1 . " * " . $chiffre2 . " = " . $chiffre1*$chiffre2 . "\n";
 
-        // print "\n<br> IF <br>\n";
+        /*
+        * IF
+        */
         // print "\n<br> 1 <br>\n";
         //     echo "Longueur Chambre ?";
         //     $longueur = read();
@@ -57,11 +59,83 @@
         //         echo "La chambre n'est pas carrée";
         //     }
 
-        print "\n<br> 5 <br>\n";
-            $listeProduits = ["ordinateur" => 500, "souris" => 5, "écran" => 50];
-            foreach ($listeProduits as $produit => $prix) {
-                print ("\n$produit coûte $prix €");
-            }
+        // print "\n<br> 5 <br>\n";
+        //     $listeProduits = ["ordinateur", "souris", "écran"];
+        //     $listePrix = [500, 5, 50];
+        //     $quantie = [];
+        //     $somme = [];
+        //     $total =0;
+        //     for ($i=0; $i < count($listeProduits); $i++) { 
+        //         print ("\n$listeProduits[$i] coûte $listePrix[$i] €");
+        //     }
+        //     for ($i=0; $i < count($listeProduits); $i++) { 
+        //         print ("\nCombien de $listeProduits[$i] voulez-vous acheter ?");
+        //         $quantite[$i] = read();
+        //         if ($quantite[$i] > 5){
+        //             $somme[$i] = $quantite[$i]*$listePrix[$i]*0.1;
+        //         }
+        //         else{
+        //             $somme[$i] = $quantite[$i]*$listePrix[$i];
+        //         }
+        //         $total += $somme[$i];
+        //     }
+        //     print("Le prix total de votre commande est de $total €");
+        //     if ($total > 100){
+        //         print "\nla livraison vous est offerte";
+        //     }
+        //     else{
+        //         print "\nla livraison vous coûtera " . $total*0.02 . "€";
+        //     }
+        //     print "\nAvez-vous une carte de fidélité ? O/N";
+        //     $carteFidelite = read();
+        //     if ($carteFidelite == "O"){
+        //         print "Grâce à votre carte de fidélité, vous bénéficiez de " . $total*0.2 . "€ de réduction. Ce qui vous fait un total de " . $total-$total*0.2 . "€";
+        //     }
 
-
-    ?>
+        /*
+        * BOUCLES
+        */
+                // print "\n<br> 1 <br>\n";
+        // $age=-1;
+        // $essai = 3;
+        // while ($age < 0 || $age > 130 && $essai > 0) {
+        //     print("Quel est ton âge ? ");
+        //     $age = read();
+        //     $essai--;
+        // }
+        // if ($age < 18 || $essai == 0){
+        //     print("Vous êtes encore très jeune...");
+        // }
+        // else{
+        //     print("Bienvenue Maître");
+        // }
+                // print "\n<br> 2 <br>\n";
+        // $a = 0;
+        // while ($a <= 10) {
+        //     print("\n".$a);
+        //     $a++;
+        // }
+                // print "\n<br> 5 <br>\n";
+        // for ($i=50; $i <= 100; $i++) { 
+        //     if ($i%2){
+        //         print("\n".$i);
+        //     }      
+        // }
+                // print "\n<br> 10 <br>\n";
+        // while ($h <= 24) {
+        //     $h += 1;
+        //     print ($h . "h\n");
+        //     $min = 5;
+        //     while ($min < 60) {
+        //         print ($min . "min\n");
+        //         $min += 5;
+        //         $sec = 10;
+        //         while ($sec < 60) {
+        //             print ($sec . "sec\n");
+        //             $sec += 10;
+        //         } 
+        //     }
+        // }
+        /*
+        * BOUCLES
+        */
