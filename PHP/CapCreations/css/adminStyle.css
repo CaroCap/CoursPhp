@@ -1,0 +1,248 @@
+body {
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ffffff;
+  text-align: left;
+  background-color: black;
+}
+
+.gauche,
+.droite {
+  float: left;
+  border: 2px dotted gray;
+  height: 350px;
+  width: 25%;
+  margin-right: -2px;
+  padding-left: 5px;
+}
+
+table {
+  font-size: xx-large;
+  margin: 300px;
+  padding: 2rem;
+  border: 1px solid black;
+  border-collapse: collapse;
+  /*width: 80%;
+    margin: 0 auto;*/
+}
+
+.fa-edit {
+  padding-left: 20px;
+  color: gray;
+}
+.fa-edit:hover {
+  color: rgb(42, 98, 51);
+}
+
+td,
+th {
+  border: 1px solid white;
+  padding: 20px;
+}
+
+tr{
+  margin-top: 300px;
+}
+
+p {
+    margin: 50px;
+  }
+
+.form_prems{
+    margin-top: 200px;
+}
+.style_input {
+  display: block;
+  width: 500px;
+  height: 50px;
+  text-indent: 10px;
+}
+
+.style_buton {
+  width: 200px;
+  height: 50px;
+  font-size: xx-large;
+}
+
+.style_buton:hover{
+    color: #212529;
+    cursor: pointer;
+}
+
+.navbar-brand {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+a {
+  color: #b3b3b3;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover {
+  color: #515151;
+}
+
+a:not([href]):not([class]) {
+  color: inherit;
+  text-decoration: none;
+}
+a:not([href]):not([class]):hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
+/*ANIMATION Logo*/
+.rotate-logo {
+  animation: rotation 6s ease-in-out;
+}
+
+.rotate-image:hover {
+  animation: rotation 1s linear infinite;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+/*BOUTON ANIMÉ*/
+
+.portfolio-experiment, .scene {
+    height: 20vh;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-display: flex;
+    -webkit-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    position: absolute;
+    top: 0;
+    right: 30%;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+  }
+  
+  .portfolio-experiment {
+    background: black;
+  }
+  .portfolio-experiment a {
+    color: white;
+    padding: 0.7em calc(0.7em * 1.2);
+    display: inline-block;
+    border: 3px solid transparent;
+    position: relative;
+    font-size: 1.5em;
+    cursor: pointer;
+    letter-spacing: 0.07em;
+  }
+  .portfolio-experiment a .text {
+    font-family: proxima-nova, monospace;
+    transform: translate3d(0, 0.7em, 0);
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+  }
+  .portfolio-experiment a:after {
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: calc(0.7em * 1.2);
+    right: calc(0.7em * 1.2);
+    height: 3px;
+    background: rgb(83, 83, 83);
+    transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s, right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
+    transform-origin: left;
+  }
+  .portfolio-experiment .line {
+    position: absolute;
+    background: rgb(83, 83, 83);
+  }
+  .portfolio-experiment .line.-right, .portfolio-experiment .line.-left {
+    width: 3px;
+    bottom: -3px;
+    top: -3px;
+    transform: scale3d(1, 0, 1);
+  }
+  .portfolio-experiment .line.-top, .portfolio-experiment .line.-bottom {
+    height: 3px;
+    left: -3px;
+    right: -3px;
+    transform: scale3d(0, 1, 1);
+  }
+  .portfolio-experiment .line.-right {
+    right: -3px;
+    transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
+    transform-origin: top;
+  }
+  .portfolio-experiment .line.-top {
+    top: -3px;
+    transition: transform 0.08s linear 0.43s;
+    transform-origin: left;
+  }
+  .portfolio-experiment .line.-left {
+    left: -3px;
+    transition: transform 0.08s linear 0.51s;
+    transform-origin: bottom;
+  }
+  .portfolio-experiment .line.-bottom {
+    bottom: -3px;
+    transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
+    transform-origin: right;
+  }
+  .portfolio-experiment a:hover .text,
+  .portfolio-experiment a:active .text {
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+  }
+  .portfolio-experiment a:hover:after,
+  .portfolio-experiment a:active:after {
+    transform: scale3d(0, 1, 1);
+    right: -3px;
+    left: -3px;
+    transform-origin: right;
+    transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s, right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s;
+  }
+  .portfolio-experiment a:hover .line,
+  .portfolio-experiment a:active .line {
+    transform: scale3d(1, 1, 1);
+  }
+  .portfolio-experiment a:hover .line.-right,
+  .portfolio-experiment a:active .line.-right {
+    transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
+    transform-origin: bottom;
+  }
+  .portfolio-experiment a:hover .line.-top,
+  .portfolio-experiment a:active .line.-top {
+    transition: transform 0.08s linear 0.4s;
+    transform-origin: right;
+  }
+  .portfolio-experiment a:hover .line.-left,
+  .portfolio-experiment a:active .line.-left {
+    transition: transform 0.08s linear 0.48s;
+    transform-origin: top;
+  }
+  .portfolio-experiment a:hover .line.-bottom,
+  .portfolio-experiment a:active .line.-bottom {
+    transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
+    transform-origin: left;
+  }

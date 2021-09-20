@@ -1,0 +1,26 @@
+.gauche, .droite {
+    float:left;
+    border:2px dotted gray;
+    height:350px;
+    width:25%; 
+    margin-right:-2px;
+    padding-left: 5px;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    /*width: 80%;
+    margin: 0 auto;*/    
+}
+
+td, th{
+    border: 1px solid black;
+}
+
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
