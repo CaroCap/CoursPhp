@@ -1,0 +1,42 @@
+body{
+    margin: auto;
+    text-align: center;
+}
+h1{
+    font-size: 5em;
+    margin-top: 1em;
+    border: solid black 1em;
+    font-family: 'Rubik Beastly', cursive;
+}
+h2{
+    font-size: 3em;
+}
+
+input{
+    margin-top: 1.5em;
+    font-size: 2em;
+    background-color: rgba(240, 128, 128, 0.205);
+    color: maroon;
+    font-family: cursive;
+    cursor: pointer;
+    border-radius: 3em;
+    padding: 0.5em;
+}
+
+.gagnant{
+    color: blue;
+    background-color: chartreuse;
+    font-size: 2.5em;
+}
+
+div.gauche{
+    display: inline-block;
+    width: 20%;
+    background-color: mediumaquamarine;
+}
+
+div.droite{
+    display: inline-block;
+    width: 75%;
+    background-color: mediumorchid;
+}
