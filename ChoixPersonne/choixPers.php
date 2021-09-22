@@ -5,18 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="choixPers.css"> -->
+    <title>Tirage au sort</title>
+    <link rel="stylesheet" href="choixPers.css">
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Beastly&display=swap" rel="stylesheet">
-    <title>Tirage au sort</title>
+    <link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
-    <h1>Tirage au sort</h1>
-    <h2>The Winner is :</h2>
-    <?php
+<?php
     session_start();
 
     if (!isset($_SESSION['wad21']) || $_SESSION['wad21'] == []) {
@@ -26,7 +26,7 @@
     function afficheTableau(array $tableau): void
     {
         foreach ($tableau as $value) {
-            print("<br>" . $value);
+            print("<div class = 'personne'>" . $value . "</div>");
         }
     }
 
@@ -35,33 +35,57 @@
         $indexVolontaire = array_rand($liste);
         $nomChoisi = $liste[$indexVolontaire];
         unset($liste[$indexVolontaire]);
-        print("<div class='gagnant'>" . $nomChoisi . "</div><br>");
+        print($nomChoisi);
         return $liste;
     }
     ?>
     
-    <div class="droite">
-        <?php
+    <div class="titre">
+        <h1>Tirage au sort</h1>
+    </div>
+
+<div class="contenuGeneral">
+    <div class="flexTitre">
+        <div class="gaucheTitre">
+            <h2>The Winner is :</h2>
+        </div>
+        <div class="droiteTitre gagnant">
+            <?php
             $_SESSION['wad21'] = tirageAuSort($_SESSION['wad21']);
-        ?>
+            ?>
+        </div>
     </div>
-
+    
+    <div class="flexContainer">
+        <div class="droite">
+            
+            <div>
+                <form action="choixPers.php">
+                    <input class="bouton ombre" type="submit" name="random" value="Random" />
+                </form>
+            </div>
+        </div>
+        <div class="gauche ombre">
+            <div class="question">
+                Qui n'a pas encore répondu ?
+            </div>
+            <div class="flexPersonne">
+                <?php
+                if($_SESSION['wad21'] == []){
+                    print("<span class = 'personne'>Tout le monde a répondu</span>");
+                }
+                else{
+                    afficheTableau($_SESSION['wad21']);
+                }
+                ?>
+            </div>
+        </div>
+        <div></div>
+    </div>
+    </div>
     <div>
-        <form action="choixPers.php">
-            <input type="submit" name="random" value="Random" />
-        </form>
-    </div>
 
-    <div class="gauche">
-        <br>
-        Qui n'a pas encore répondu ?
-        <br>
-        <?php
-        // print("Qui n'a pas encore répondu ? ");
-        afficheTableau($_SESSION['wad21']);
-        ?>
     </div>
-
 </body>
 
 </html>

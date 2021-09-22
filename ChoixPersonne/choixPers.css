@@ -2,41 +2,129 @@ body{
     margin: auto;
     text-align: center;
 }
+
+.titre{
+    background-color: blue;
+    border: solid black 5px;
+    /* border-radius: 10px; */
+}
 h1{
     font-size: 5em;
-    margin-top: 1em;
-    border: solid black 1em;
-    font-family: 'Rubik Beastly', cursive;
+    /* margin-top: 1em; */
+    font-family: 'Stick No Bills', sans-serif;
 }
+
 h2{
     font-size: 3em;
+    font-family: cursive;
 }
 
 input{
     margin-top: 1.5em;
     font-size: 2em;
-    background-color: rgba(240, 128, 128, 0.205);
-    color: maroon;
+    /* background-color: rgba(240, 128, 128, 0.205);
+    color: maroon; */
     font-family: cursive;
     cursor: pointer;
-    border-radius: 3em;
+    border-radius: 12px;
     padding: 0.5em;
+    /* box-shadow: 7px 7px 4px 2px rgba(71, 69, 68, 0.2);     */
+    
 }
 
-.gagnant{
-    color: blue;
-    background-color: chartreuse;
-    font-size: 2.5em;
+.ombre{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.bouton:hover {
+    box-shadow: 0 12px 18px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.contenuGeneral{
+    margin: 1em;    
+}
+
+.flexTitre{
+    /* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+    display: flex;
+    flex-direction: row; /* facultatif car valeur par défaut = de gauche à droite*/
+    justify-content: center; /*aligne sur le main axe*/
+    align-items: center; /*aligne sur le cross axe*/
+    /* align-content: flex-start; */ /*aligne multilignes*/
+    /* background-color: rgb(255, 0, 140); */
+    height: 200px;
+}
+
+.flexContainer{
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    /* background-color: aqua; */
+    height: 200px;
+}
+
+div.gaucheTitre{
+    order: -1;
+    width: 45%;
+    /* flex-grow: 1; */
+    /* background-color: mediumaquamarine; */
+}
+
+div.droiteTitre{
+    order: 2;
+    width: 45%;
+    /* flex-grow: 4; */
+    /* background-color: mediumorchid; */
 }
 
 div.gauche{
-    display: inline-block;
-    width: 20%;
-    background-color: mediumaquamarine;
+    order: -1;
+    width: 37%;
+    /* flex-grow: 1; */
+    /* background-color: mediumaquamarine; */
 }
 
 div.droite{
-    display: inline-block;
-    width: 75%;
-    background-color: mediumorchid;
+    order: 2;
+    width: 50%;
+    /* flex-grow: 4; */
+    /* background-color: mediumorchid; */
+}
+
+.flexPersonne{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; /*OU on aurait pu direct écrire flex-flow : coluwn wrap*/
+    justify-content: space-evenly;
+    align-items: flex-start;
+    align-content: space-around;
+    max-height: 150px;
+    /* background-color: forestgreen; */
+    padding: 1em;
+    gap: 10px 30px;
+    border: black solid 2px ;
+}
+
+.personne{
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.2em;
+}
+
+.question{
+    font-family: cursive;
+    font-size: 1.5em;
+    padding: 1em;
+    border: black solid 2px ;
+}
+
+.gagnant{
+    /* color: blue; */
+    /* background-color: chartreuse; */
+    font-size: 4em;
+    font-family: 'Patrick Hand', cursive;
+    text-align: left;
+    padding-left: 2em;
 }
