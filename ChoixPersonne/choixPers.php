@@ -84,7 +84,12 @@
     </div>
     </div>
     <div>
-
+    <?php
+    // FAUX CHANGEMENT DE PAGE POUR RECHARGER DISCRETEMENT => A ECRIRE SUR PAGE BLANCHE ET REDIRIGERA DIRECT SUR ANCIENNE PAGE 
+        // session_start();
+        // $_SESSION['compteur']=0;
+        // header('location: .choixPers.php');
+    ?>
     </div>
 </body>
 
