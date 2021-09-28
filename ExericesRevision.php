@@ -137,5 +137,17 @@
         //     }
         // }
         /*
-        * BOUCLES
+        * FONCTIONS
         */
+        // 10. Créez une fonction qui reçoit un array et le renverse (l'array original change, on a besoin d'utiliser une référence)
+        $tableau = ['Caro', 'Alexandra', 'Françoise', 'Jérôme'];
+        function renverseTableau(array &$tableau):void
+        {
+                $inverse=[];
+                for ($i=count($tableau)-1; $i >=0 ; $i--) { 
+                        $inverse[]=$tableau[$i];
+                }
+                $tableau = $inverse;
+        }
+        renverseTableau($tableau);
+        print_r($tableau);
