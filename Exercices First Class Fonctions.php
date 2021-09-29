@@ -53,7 +53,7 @@ $changeCasse=[$strMinuscule, $strMajuscule, $firstLettre];
 $fonctionsMultiples = function(callable $fonctions) : void{
     print ($fonctions('Caroline CAP').'<br>');
 };
-array_map($fonctionsMultiples, $casse);
+array_map($fonctionsMultiples, $changeCasse);
 
     print('<br>Ex 7+<br>');
 $fonctionsMultiples = function(callable $fonctions) : string{
@@ -66,7 +66,7 @@ $casse=[$strMinuscule, $strMajuscule, $firstLettre];
 $motAChanger = ['Truc', 'BiZZARRe', 'coucou']; // même nombre que nombre de fonction pour que mon array_map puisse fonctionner
 $fonctionsMultiples = function(callable $fonctions, string $motAChanger) : void{
         print ($fonctions($motAChanger).'<br>');
-};
+    };
 array_map($fonctionsMultiples, $casse, $motAChanger);
 
 
