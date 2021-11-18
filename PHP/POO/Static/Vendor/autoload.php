@@ -2,6 +2,8 @@
 
 spl_autoload_register (function (string $nomClasse){
     
+    echo "<br>Le nom de la classe qu'on veut charger est : " . $nomClasse;
+    
     // à nous de choisir où se trouvent les classes
     // et dans quel format
     if (file_exists("./class/".$nomClasse.".class.php")){
@@ -17,5 +19,6 @@ spl_autoload_register (function (string $nomClasse){
         throw (new Exception("Fichier par trouvé!!"));
     }
 });
+
 
 ?>
