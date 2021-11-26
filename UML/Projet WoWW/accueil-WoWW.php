@@ -44,7 +44,7 @@ $character2 = new Character([
     'type'=>$type3]);
 
 $character3 = new Character([
-    'name'=>"Gabah",
+    'name'=>"Gabahla",
     'type'=>$type1]);
 
 
